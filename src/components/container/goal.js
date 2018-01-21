@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Push from 'push.js';
+import ReactSwipe from 'react-swipe';
 import Muller from '../../assets/muller.gif';
+import Cheer from '../../assets/cheer.gif';
 import '../../App.css';
 
 class Goal extends Component {
@@ -29,7 +31,10 @@ class Goal extends Component {
     return (
       <div>
         <h1>Hey it's a goal</h1>
-        <img src = { Muller } />
+        <ReactSwipe className="carousel" swipeOptions={{continuous: false}}>
+          <img src = { Muller }/>
+          <img src = { Cheer }/>
+        </ReactSwipe>
       </div>
     );
   }
